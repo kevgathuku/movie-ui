@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+An attempt to re-implement this excellent [Movie UI](https://dribbble.com/shots/2403683--Exploration-Movie-Streaming)
+
 ## Available Scripts
 
 In the project directory, you can run:
