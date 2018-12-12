@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withKnobs, text } from "@storybook/addon-knobs";
 import { Button } from "@storybook/react/demo";
-import MovieImage from "../../src/atoms/MovieImage";
+import MovieImage from "../../src/atoms/movie-image";
 
 storiesOf("Button", module)
   .add("with text", () => <Button>Hello Button</Button>)
