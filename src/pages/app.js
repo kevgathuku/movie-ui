@@ -1,24 +1,33 @@
 import React, { Component } from "react";
-import "./app.css";
+import styled from 'styled-components'
+
+import MovieCard from '../organisms/movie-card';
+
+const Styles = styled.div`
+  display: flex;
+  flex-direction: row;
+	background-color: #cdecff;
+`;
+
+const movies = [
+	{
+		title: 'Jurassic World',
+		genres: ['Science Fiction']
+	},
+	{
+		title: 'Gone Girl',
+		genres: ['Drama', 'Thriller']
+	}
+]
 
 class App extends Component {
 	render() {
 		return (
-			<div className="App">
-				<header className="App-header">
-					<p>
-						Edit <code>src/App.js</code> and save to reload.
-					</p>
-					<a
-						className="App-link"
-						href="https://reactjs.org"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Learn React
-					</a>
-				</header>
-			</div>
+			<Styles>
+				{
+					movies.map(movie => <MovieCard key={movie.title} title={movie.title} genres={movie.genres} />)
+				}
+			</Styles>
 		);
 	}
 }
