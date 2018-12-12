@@ -1,17 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
+import styled from 'styled-components'
 
-class MovieImage extends Component {
-	render() {
-		return (
-			<img
-				src={this.props.src}
-				alt="movie pic"
-				className="movie-image"
-			/>
-		);
-	}
-}
+const Styles = styled.img`
+	width: 200px;
+	height: 290px;
+`;
+
+const MovieImage = ({ src, ...other }) => (
+	<Styles {...other} src={src} alt="movie pic" />
+);
 
 MovieImage.propTypes = {
 	src: PropTypes.string.isRequired
