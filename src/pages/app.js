@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
-import MovieCard from "../organisms/movie-card";
+import MovieCard from '../organisms/movie-card';
 
 const Styles = styled.div`
   display: flex;
@@ -11,13 +11,13 @@ const Styles = styled.div`
 
 const movies = [
   {
-    title: "Jurassic World",
-    genres: ["Science Fiction"]
+    title: 'Jurassic World',
+    genres: ['Science Fiction'],
   },
   {
-    title: "Gone Girl",
-    genres: ["Drama", "Thriller"]
-  }
+    title: 'Gone Girl',
+    genres: ['Drama', 'Thriller'],
+  },
 ];
 
 class App extends Component {
@@ -26,6 +26,7 @@ class App extends Component {
       <Styles>
         {movies.map(movie => (
           <MovieCard
+            imageSrc="https://placeimg.com/200/290/nature"
             key={movie.title}
             title={movie.title}
             genres={movie.genres}
